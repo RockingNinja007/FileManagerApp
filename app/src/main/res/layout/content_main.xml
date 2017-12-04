@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.vrasn.new_app1.Main"
+    tools:showIn="@layout/main"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="top"
+        android:background="@color/colorPrimaryDark">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/add_folder"
+            android:background="@android:drawable/ic_input_add"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:id="@+id/menu"
+            android:background="@android:drawable/ic_menu_preferences"
+            android:gravity="end"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/dir_name"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="italic"
+            android:textSize="20dp"
+            android:singleLine="true" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Directory path"
+        android:id="@+id/path"
+        android:paddingLeft="20dp"
+        android:textColor="#0400eb"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:background="#ff5c5c"
+        android:gravity="bottom|top"
+        android:paddingBottom="5dp"
+        android:textStyle="italic"
+        android:hint="path"
+        android:typeface="serif"
+        android:editable="false"
+        android:autoText="true" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list"
+        android:layout_weight="1.09"
+        android:background="#d8d8d8"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:drawSelectorOnTop="false"
+        android:fastScrollAlwaysVisible="false"
+        android:fastScrollEnabled="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:footerDividersEnabled="false"
+        android:overScrollHeader="#000000"
+        android:longClickable="false"
+        android:choiceMode="multipleChoice"></ListView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.91"
+            android:id="@+id/search_file_path"
+            android:singleLine="true"
+            android:hint="Enter file/dir name to search"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/ic_menu_search"
+            android:id="@+id/search_file_btn" />
+    </LinearLayout>
+
+
+</LinearLayout>
